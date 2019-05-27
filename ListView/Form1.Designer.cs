@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.lvView = new System.Windows.Forms.ListView();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtWork = new System.Windows.Forms.TextBox();
-            this.txtAdd = new System.Windows.Forms.TextBox();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.lblWork = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chWork = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtWork = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblWork = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvView
@@ -55,6 +55,22 @@
             this.lvView.TabIndex = 0;
             this.lvView.UseCompatibleStateImageBehavior = false;
             this.lvView.View = System.Windows.Forms.View.Details;
+            this.lvView.Click += new System.EventHandler(this.LvView_Click);
+            // 
+            // chName
+            // 
+            this.chName.Text = "이름";
+            this.chName.Width = 100;
+            // 
+            // chAge
+            // 
+            this.chAge.Text = "나이";
+            this.chAge.Width = 100;
+            // 
+            // chWork
+            // 
+            this.chWork.Text = "직업";
+            this.chWork.Width = 100;
             // 
             // lblName
             // 
@@ -72,19 +88,19 @@
             this.txtName.Size = new System.Drawing.Size(217, 21);
             this.txtName.TabIndex = 2;
             // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(56, 170);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(217, 21);
+            this.txtAge.TabIndex = 3;
+            // 
             // txtWork
             // 
-            this.txtWork.Location = new System.Drawing.Point(56, 170);
+            this.txtWork.Location = new System.Drawing.Point(56, 197);
             this.txtWork.Name = "txtWork";
             this.txtWork.Size = new System.Drawing.Size(217, 21);
-            this.txtWork.TabIndex = 3;
-            // 
-            // txtAdd
-            // 
-            this.txtAdd.Location = new System.Drawing.Point(56, 197);
-            this.txtAdd.Name = "txtAdd";
-            this.txtAdd.Size = new System.Drawing.Size(217, 21);
-            this.txtAdd.TabIndex = 4;
+            this.txtWork.TabIndex = 4;
             // 
             // lblAge
             // 
@@ -112,21 +128,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // chName
-            // 
-            this.chName.Text = "이름";
-            this.chName.Width = 100;
-            // 
-            // chAge
-            // 
-            this.chAge.Text = "나이";
-            this.chAge.Width = 100;
-            // 
-            // chWork
-            // 
-            this.chWork.Text = "직업";
-            this.chWork.Width = 100;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Form1
             // 
@@ -136,8 +138,8 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblWork);
             this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.txtAdd);
             this.Controls.Add(this.txtWork);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lvView);
@@ -155,8 +157,8 @@
         private System.Windows.Forms.ListView lvView;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.TextBox txtWork;
-        private System.Windows.Forms.TextBox txtAdd;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblWork;
         private System.Windows.Forms.Button btnAdd;
